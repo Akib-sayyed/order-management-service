@@ -1,3 +1,28 @@
 spring:
   application:
     name: order-management-service
+
+  # H2 Database Connection Configuration
+  datasource:
+    url: jdbc:h2:mem:omsdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  # JPA/Hibernate Properties
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true                # 1. Prints the SQL queries to stdout
+    hibernate:
+      # Automatically creates/updates tables in H2 based on your @Entity classes
+      ddl-auto: update
+
+  # # The URL path to access the console (http://localhost:8080/h2-console)
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+
+
+
