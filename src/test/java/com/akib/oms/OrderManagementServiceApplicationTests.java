@@ -1,4 +1,4 @@
-package com.akib.order_management_service;
+package com.akib.oms;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
